@@ -12,9 +12,6 @@ import {
 } from "react-bootstrap";
 
 
-// import './bootstrap.css'
-// import './profile.css'
-// import 'universal-parallax.min.css'
 import Favorites from "./Favorites.jsx";
 import Upload from "./Upload.jsx";
 import axios from "axios";

@@ -12,7 +12,7 @@ class Chat extends React.Component {
       groupMessages: [],
       textMessage: ''
     }
-    this.socket = io.connect('http://localhost:8080');
+    this.socket = io.connect('http://18.218.149.150:8810');
     this.socket.emit('JOIN_ROOM', this.props.selectedRoom['group_name']) // TODO: Change to select first room in chat array 
     this.socket.on('SEND_MESSAGE', (data) => this.receiveMessages(data))
 

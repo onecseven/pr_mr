@@ -16,16 +16,14 @@ const fs = require("fs");
 const bodyParser = require("body-parser");
 const request = require("request");
 const app = express();
-const imgur = {
-  auth: process.env.imgurAuth,
-  bear: process.env.imgurBear
-}
+const imgur = require('../../config.js')
 
 app.use(fileupload());
 app.use(morgan("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 const server = require("http").createServer(app);
+//let server = app.listen(8810)
 app.use(parser.json());
 app.use(
   session({
@@ -455,9 +453,9 @@ app.post("/img", (req, res) => {
   });
 });
 
-const port = 8080;
+const port = 80;
 
-server.listen(port, () => {
+let hi = server.listen(port, () => {
   console.log("App is listening to port", port);
 });
 

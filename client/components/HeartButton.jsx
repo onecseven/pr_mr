@@ -8,11 +8,11 @@ class HeartButton extends React.Component {
       loggedIn: false,
       isAlreadyFave: false
     };
-    // figure if we are logged in
+    // are we logged in?
     if (this.props.user_id) {
       this.state.loggedIn = true;
-      this.checkFaved = this.checkFaved.bind(this);
     }
+    this.checkFaved = this.checkFaved.bind(this);
     this.addToFave = this.addToFave.bind(this)
   }
 

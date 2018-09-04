@@ -1,11 +1,11 @@
 const mysql = require('mysql')
 
 const config = {
-  host: process.env.dbHost,
-  user: process.env.dbUser,
-  password: process.env.dbPassword,
-  database: process.env.database,
-  port: process.env.dbPort
+    host: "study.c0dk4hjayriz.us-east-1.rds.amazonaws.com",
+    user: "r2d2",
+    password: "hackreactor",
+    database: "Study",
+    port: '3306'
 }
 
 const db = mysql.createPool(config);
